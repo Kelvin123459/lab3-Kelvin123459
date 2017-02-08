@@ -75,7 +75,7 @@ import javax.swing.JPanel;
 	                        g.setColor(Color.WHITE);
 	                        g.drawPolygon(p2);*/
 	                      
-	                      //White Lines
+	                      //Red Lines
 	                        g.setColor(Color.RED);
 	                        g.fillRect(x1, y1, getWidth()+1, getHeight()/5);
 	                        g.fillRect(x1, y1+height*2/5, getWidth()+1, getHeight()/5);
