@@ -3,7 +3,6 @@
 	import java.awt.Graphics;
 	import java.awt.Insets;
 import java.awt.Polygon;
-import java.awt.Rectangle;
 
 import javax.swing.JPanel;
 	 
