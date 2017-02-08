@@ -3,6 +3,7 @@
 	import java.awt.Graphics;
 	import java.awt.Insets;
 import java.awt.Polygon;
+import java.awt.Rectangle;
 
 import javax.swing.JPanel;
 	 
@@ -25,7 +26,7 @@ import javax.swing.JPanel;
 	                        int height = y2 - y1;	                        
 	 
 	                        //Paint the background
-	                        g.setColor(Color.BLACK);
+	                        g.setColor(Color.WHITE);
 	                        g.fillRect(x1, y1, width+1, height+1);
 	                        
 	                       /*//Draw a border
@@ -60,6 +61,35 @@ import javax.swing.JPanel;
 	                        g.setColor(Color.YELLOW);
 	                        g.fillPolygon(p);*/
 	                        
+	                        /*Polygon p2 = new Polygon();
+	                        p2.addPoint(x1 + 25, y1 + 73);
+	                        p2.addPoint(x1 + 41, y1 + 73);
+	                        p2.addPoint(x1 + 47, y1 + 58);
+	                        p2.addPoint(x1 + 53, y1 + 73);
+	                        p2.addPoint(x1 + 69, y1 + 73);
+	                        p2.addPoint(x1 + 56, y1 + 83);
+	                        p2.addPoint(x1 + 61, y1 + 98);
+	                        p2.addPoint(x1 + 47, y1 + 88);
+	                        p2.addPoint(x1 + 34, y1 + 98);
+	                        p2.addPoint(x1 + 38, y1 + 83);
+	                        g.setColor(Color.WHITE);
+	                        g.drawPolygon(p2);*/
+	                      
+	                      //White Lines
+	                        g.setColor(Color.RED);
+	                        g.fillRect(x1, y1, getWidth()+1, getHeight()/5);
+	                        g.fillRect(x1, y1+height*2/5, getWidth()+1, getHeight()/5);
+	                        g.fillRect(x1, y1+height*4/5, getWidth()+1, getHeight()/5);
+	                        
+	                        //Flag Triangle
+	                        Polygon triangle = new Polygon();
+	                        triangle.addPoint(x1,y1);
+	                        triangle.addPoint(x1+width/3, y1+height/2);
+	                        triangle.addPoint(x1, y2);
+	                        g.setColor(Color.BLUE);
+	                        g.fillPolygon(triangle);
+	                        
+	                        //Flag Star
 	                        Polygon p2 = new Polygon();
 	                        p2.addPoint(x1 + 25, y1 + 73);
 	                        p2.addPoint(x1 + 41, y1 + 73);
@@ -72,6 +102,8 @@ import javax.swing.JPanel;
 	                        p2.addPoint(x1 + 34, y1 + 98);
 	                        p2.addPoint(x1 + 38, y1 + 83);
 	                        g.setColor(Color.WHITE);
-	                        g.drawPolygon(p2);
+	                        g.fillPolygon(p2);
+	                        
+	                        
 	            }
 	}
